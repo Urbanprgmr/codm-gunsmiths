@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODM Gunsmith Loadout</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>CODM Gunsmith Loadout</h1>
+
+        <div class="loadout-section">
+            <label for="gunSelect">Select Weapon:</label>
+            <select id="gunSelect" onchange="updateAttachments()">
+                <option value="" disabled selected>Select a Gun</option>
+                <option value="AK-47">AK-47</option>
+                <option value="M4">M4</option>
+                <option value="DL Q33">DL Q33</option>
+                <option value="Fennec">Fennec</option>
+            </select>
+
+            <label for="loadoutName">Loadout Name:</label>
+            <input type="text" id="loadoutName" placeholder="Enter Loadout Name">
+
+            <h3>Select Attachments:</h3>
+            <div id="attachments"></div>
+
+            <button onclick="saveLoadout()">Save Loadout</button>
+        </div>
+
+        <h2>Saved Loadouts</h2>
+        <div id="savedLoadouts"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
